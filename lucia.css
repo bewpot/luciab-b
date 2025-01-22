@@ -1,0 +1,352 @@
+/* Fullscreen Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Altezza intera per desktop */
+    background-image: url('images/logo1.png'); /* Immagine per desktop */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Stile per dispositivi mobili */
+@media (max-width: 768px) {
+    .hero {
+        height: 33vh; /* Riduce l'altezza a un terzo dello schermo su mobile */
+        background-image: url('images/Progetto senza titolo (40).jpg'); /* Immagine per dispositivi mobili */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 20px; /* Aggiunge spazio tra il menu e l'immagine */
+    }
+}
+
+/* Overlay sopra l'immagine */
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Galleria */
+#gallery {
+    background-color: #f9f9f9; /* Sfondo leggero per contrasto */
+}
+
+#gallery img {
+    height: 400px; /* Altezza uniforme per le immagini */
+    object-fit: cover; /* Adatta le immagini senza deformarle */
+    border-radius: 8px; /* Angoli leggermente arrotondati */
+}
+
+/* Linea di separazione nel footer */
+.footer-separator {
+    border: 0;
+    height: 2px; /* Linea più spessa */
+    background-color: rgb(255, 255, 255); /* Colore chiaro e semi-trasparente */
+    width: 100%;
+}
+
+/* Social Icons */
+footer i {
+    font-size: 1.5rem; /* Dimensione icone */
+    margin-right: 8px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #b6b7b8; /* Cambia colore al passaggio del mouse */
+}
+
+/* Icona WhatsApp Fissa */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Distanza dal bordo inferiore */
+    right: 20px; /* Distanza dal bordo destro */
+    background-color: #25D366; /* Colore verde WhatsApp */
+    color: white; /* Colore dell'icona */
+    font-size: 2rem; /* Dimensione dell'icona */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Forma circolare */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra per evidenza */
+    z-index: 1000; /* Sempre sopra altri elementi */
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1); /* Leggera animazione al passaggio del mouse */
+    background-color: #1DA851; /* Colore più scuro per effetto hover */
+}
+/* Modifica dell'icona WhatsApp per dispositivi mobili */
+@media (max-width: 768px) {
+    .whatsapp-icon {
+        font-size: 1.5rem; /* Riduci la dimensione dell'icona */
+        width: 40px; /* Riduci larghezza */
+        height: 40px; /* Riduci altezza */
+        bottom: 10px; /* Posiziona più vicino al bordo inferiore */
+        right: 10px; /* Sposta leggermente più a destra */
+    }
+}
+
+
+/* Stile per immagini del carosello su desktop */
+@media (min-width: 768px) {
+    #gallery .carousel-inner .carousel-item img {
+        width: 100%; /* Larghezza completa del contenitore */
+        height: auto; /* Mantiene le proporzioni originali */
+        max-height: 500px; /* Altezza massima per evitare immagini troppo grandi */
+        object-fit: contain; /* Adatta l'immagine senza tagliarla */
+        margin: 0 auto; /* Centra l'immagine */
+        border-radius: 8px; /* Mantiene angoli arrotondati */
+    }
+}
+
+/* Titolo Camera */
+.camera-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Carosello Immagini: Adatta l'immagine */
+.carousel-item img {
+    width: 100%; /* L'immagine riempie la larghezza */
+    height: 100%; /* L'immagine riempie l'altezza */
+    object-fit: cover; /* Adatta l'immagine senza distorsioni */
+}
+
+/* Card: Assicura un'altezza fissa */
+.card {
+    position: relative;
+    height: 450px; /* Altezza fissa per le card */
+    overflow: hidden; /* Nasconde contenuti fuori dal limite */
+    border: none; /* Nessun bordo */
+}
+
+
+
+/* Spaziature tra le sezioni su PC */
+@media (min-width: 992px) {
+    .card {
+        height: 500px; /* Altezza maggiore per PC */
+    }
+
+    .row.text-center > div {
+        margin-bottom: 20px; /* Spaziatura uniforme tra le sezioni */
+    }
+}
+/* Spaziatura maggiore tra i titoli su mobile */
+@media (max-width: 768px) {
+    .camera-title {
+        margin-top: 30px; /* Aggiunge più spazio sopra il titolo */
+    }
+}
+
+
+
+/* Frecce sotto il carosello */
+.btn-sm {
+    font-size: 1rem; /* Dimensione del testo delle frecce */
+    padding: 5px 10px; /* Spaziatura interna */
+    border-radius: 5px; /* Angoli arrotondati */
+    border: 1px solid #ccc; /* Bordo sottile */
+    background-color: #fff; /* Sfondo bianco */
+    color: #333; /* Colore scuro */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animazione */
+}
+
+/* Hover delle frecce */
+.btn-sm:hover {
+    background-color: #e0e0e0; /* Sfondo più scuro al passaggio del mouse */
+    color: #000; /* Testo più scuro */
+    border-color: #000; /* Cambia il colore del bordo */
+}
+
+/* Contatore immagini */
+.image-counter {
+    font-size: 1rem; /* Dimensione del testo */
+    font-weight: bold; /* Testo in grassetto */
+    color: #333; /* Colore scuro */
+    padding: 0 10px; /* Spaziatura laterale */
+    display: inline-block; /* Posizionamento orizzontale */
+}
+
+/* Posizionamento dei controlli */
+.d-flex {
+    margin-top: 10px; /* Spaziatura sopra i controlli */
+    justify-content: center; /* Centra i controlli orizzontalmente */
+    align-items: center; /* Allinea i controlli verticalmente */
+}
+
+
+/* Titolo delle icone */
+#dintorni h5 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Icone grandi */
+#dintorni i {
+    font-size: 3rem; /* Dimensione delle icone */
+    color: #007bff; /* Colore primario */
+    transition: transform 0.3s ease; /* Effetto al passaggio del mouse */
+}
+
+/* Hover su icone */
+#dintorni i:hover {
+    transform: scale(1.2); /* Leggero ingrandimento */
+    color: #0056b3; /* Colore scuro al passaggio */
+}
+
+
+@media (max-width: 768px) {
+    #dintorni .col-6 {
+        margin-bottom: 20px; /* Aggiunge spaziatura tra le righe */
+    }
+}
+
+
+.card {
+    position: relative;
+    border: none;
+    overflow: hidden;
+    border-radius: 15px; /* Angoli arrotondati */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Leggera ombra */
+    background: linear-gradient(135deg, #87cefa, #f0f8ff); /* Sfondo elegante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adatta l'immagine */
+    border: 5px solid rgba(255, 255, 255, 0.8); /* Bordo bianco trasparente */
+    border-radius: 15px; /* Stesso raggio della card */
+}
+
+.card-content {
+    position: absolute;
+    bottom: 10%; /* Posiziona la scritta e il pulsante in basso */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2; /* Assicura che sia sopra l'immagine */
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Leggera ombra sul testo */
+    margin-bottom: 10px;
+}
+
+.card-content .btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(214, 163, 119); /* Colore pulsante */
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.card-content .btn:hover {
+    background-color:rgb(214, 163, 119); /* Colore hover pulsante */
+    transform: scale(1.1); /* Leggero zoom */
+}
+
+/* Stile per l'overlay */
+.overlay {
+    transition: opacity 0.3s ease-in-out;
+}
+.hover-opacity-100:hover {
+    opacity: 1 !important;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Sfondo semi-trasparente */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Invisibile di default */
+    transition: opacity 0.10s ease; /* Transizione */
+}
+
+.card:hover .overlay {
+    opacity: 1; /* Mostra l'overlay al passaggio del mouse */
+}
+/* Testo nell'overlay */
+.overlay p {
+    color: white;
+    font-size: 1rem; /* Dimensione del testo */
+    text-align: justify; /* Testo giustificato */
+    padding: 1rem; /* Spaziatura interna */
+}
+
+/* Centrare il video */
+.video-container {
+    max-width: 800px; /* Dimensioni massime per il video */
+    margin: 0 auto; /* Centrare l'elemento */
+}
+
+/* Ridurre lo spazio bianco */
+.hero-section {
+    margin-bottom: 20px; /* Riduce lo spazio sotto il video */
+}
+
+/* Ridimensionare il video su PC */
+@media (min-width: 992px) {
+    .hero-section iframe {
+        width: 800px; /* Larghezza personalizzata per PC */
+        height: 450px; /* Altezza proporzionata */
+    }
+}
+
+
+@media (min-width: 768px) {
+    .custom-title {
+        font-size: 2.5rem; /* Dimensione maggiore per il titolo */
+        font-weight: bold; /* Aggiunge enfasi */
+    }
+
+    .custom-description {
+        font-size: 1.25rem; /* Dimensione maggiore per il paragrafo */
+        line-height: 1.8; /* Migliora la leggibilità */
+    }
+}
+
+@media (min-width: 768px) {
+    #services .custom-title {
+        font-size: 2.5rem; /* Ingrandisce il titolo */
+        font-weight: bold; /* Titolo in grassetto */
+    }
+
+    #services .custom-description {
+        font-size: 1.25rem; /* Ingrandisce la descrizione */
+        line-height: 1.8; /* Aumenta lo spazio tra le righe per leggibilità */
+    }
+}
+
+

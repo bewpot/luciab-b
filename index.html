@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&B Mare Blu</title>
+    <link rel="stylesheet" href="mare.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Info -->
+    <div class="header-info">
+        <div class="container">
+            <p><i class="fas fa-envelope"></i> info@mareblu.com</p>
+            <p><i class="fas fa-phone"></i> +39 123 456 789</p>
+        </div>
+    </div>
+
+   <!-- Nome e Logo -->
+   <div class="logo-section">
+    <div class="container logo-container">
+        <h1 class="site-title">La Casa di Lucia</h1>
+        <img src="images/logo.png" alt="Logo La Casa di Lucia" class="logo">
+    </div>
+</div>
+<!-- Navigazione -->
+<nav class="main-nav">
+    <div class="container">
+        <!-- Hamburger Menu -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Menu Links -->
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#camere">Camere</a></li>
+            <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#dintorni">Dintorni</a></li>
+            <li><a href="#localita">Località</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>B&B Mare Blu</h1>
+            <p>Un'oasi di tranquillità sul mare</p>
+            <a href="#camere" class="cta">Scopri di più</a>
+        </div>
+    </header>
+
+    <!-- Chi Siamo -->
+    <section id="chi-siamo" class="section">
+        <h2>Chi Siamo</h2>
+        <p>
+            Benvenuti al B&B Mare Blu, situato in una splendida località balneare. Offriamo camere confortevoli e un'atmosfera rilassante per rendere il vostro soggiorno indimenticabile. Ideale per coppie, famiglie e viaggiatori che cercano un'esperienza autentica vicino al mare.
+        </p>
+    </section>
+
+    <!-- Camere -->
+    <section id="camere" class="section">
+        <h2>Le Nostre Camere</h2>
+        <div class="camere-container">
+            <div class="camera">
+                <img src="images/camera1.jpg" alt="Camera vista mare">
+                <h3>Camera Vista Mare</h3>
+                <p>Una splendida vista sull'oceano e tutti i comfort per un soggiorno perfetto.</p>
+            </div>
+            <div class="camera">
+                <img src="images/camera2.jpg" alt="Camera familiare">
+                <h3>Camera Familiare</h3>
+                <p>Spaziosa e accogliente, perfetta per famiglie in cerca di relax.</p>
+            </div>
+            <div class="camera">
+                <img src="images/camera3.jpg" alt="Camera deluxe">
+                <h3>Camera Deluxe</h3>
+                <p>Eleganza e comfort con un tocco di lusso per un'esperienza unica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 B&B Mare Blu. Tutti i diritti riservati.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            const links = document.querySelectorAll('.nav-links li');
+    
+            hamburger.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+    
+                // Ripristina o avvia l'animazione
+                links.forEach((link, index) => {
+                    if (navLinks.classList.contains('active')) {
+                        link.style.transitionDelay = `${index * 0.1}s`;
+                    } else {
+                        link.style.transitionDelay = '0s';
+                        link.style.opacity = '0'; // Nasconde i link quando si chiude
+                        link.style.transform = 'translateY(-20px)';
+                    }
+                });
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
